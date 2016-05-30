@@ -72,11 +72,17 @@
 	height:200px;	
 }
 
-.spinner {
-	position: absolute;
-	top:0px;
+.gaPreloadBox {
+	position:relative; 
+	top:0px; 
 	left:0px;
-	width:100%;
-	height:100%;
 }
 
+.gaCentered {
+    position: absolute;
+    top: 50%;
+    left: 50%;  
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);   
+}

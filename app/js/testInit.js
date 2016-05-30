@@ -1,51 +1,38 @@
 
 
 	(function()	{
-		var idxFull = 0, idxPreview = 1,
 		
-		imageList = [
-			[ 'img-28.jpg', 'img-sm-28.jpg'],
-			[ 'img-27.jpg', 'img-sm-27.jpg'],
-			[ 'img-26.jpg', 'img-sm-26.jpg'],
-			[ 'img-25.jpg', 'img-sm-25.jpg'],
-			[ 'img-24.jpg', 'img-sm-24.jpg'],
-			[ 'img-23.jpg', 'img-sm-23.jpg'],
-			[ 'img-22.jpg', 'img-sm-22.jpg'],
-			[ 'img-21.jpg', 'img-sm-21.jpg'],
-			[ 'img-20.jpg', 'img-sm-20.jpg'],
-			[ 'img-19.jpg', 'img-sm-19.jpg'],
-			[ 'img-1.jpg', 'img-sm-1.jpg'],
-		],
 		
-		createSpinner = function(div) {
-			
-			var oo = $('<div></div>').addClass('center spinner');
+		var createSpinner = function(div) {
 			
 			var outer = $('<div></div>')
-			.addClass('preloader-wrapper small active');
+				.addClass('gaCentered');
 			
-			var inner = $('<div></div>')
-			.addClass('spinner-layer spinner-green-only')
-			.append(
+			var spinner = $('<div></div>')
+			.addClass('preloader-wrapper small active')
+			.append(			
 				$('<div></div>')
-				.addClass('circle-clipper left')
+				.addClass('spinner-layer spinner-green-only')
 				.append(
 					$('<div></div>')
-					.addClass('circle')))
-			.append(
-				$('<div></div>')
-				.addClass('gap-patch')
+					.addClass('circle-clipper left')
+					.append(
+						$('<div></div>')
+						.addClass('circle')))
 				.append(
 					$('<div></div>')
-					.addClass('circle')))
-			.append(
-				$('<div></div>')
-				.addClass('circle-clipper right')
+					.addClass('gap-patch')
+					.append(
+						$('<div></div>')
+						.addClass('circle')))
 				.append(
 					$('<div></div>')
-					.addClass('circle')));
+					.addClass('circle-clipper right')
+					.append(
+						$('<div></div>')
+						.addClass('circle'))));
 					
-			outer.append(inner);
+			outer.append(spinner);
 			div.append(outer);
 			
 			
@@ -69,21 +56,44 @@
 			
 		},
 		
-		setPreviews = function() {			
-			var $div = $('#imgBox');			
-			imageList.forEach(function(e) {				
-				$div.append(
-					$('<img></img>')
-					.attr('src', 'images/' + e[idxPreview])
-					.height(200));
-				createSpinner($div)	;
+		removeSpinner = function(div) {
+			$('.gaCentered').remove();
+		},
+		
+		getFullImageSource = function($image){
+			var url = $image.attr('src');
+			return url.replace(/-sm/g, "");
+		},
+		
+		downloadImage = function($image) {
+			var $downloadingImage;
+			
+			//$image.height(200);
+			createSpinner($image.parent());
+			$downloadingImage = $("<img>");
+			$downloadingImage.attr('src', getFullImageSource($image)); 
+			
+			$downloadingImage.load(function(){
+				$image.attr("src", $(this).attr("src"));	
+				removeSpinner($image.parent());
+				//$image.addClass('materialboxed');
+			});
+		},
+		
+		
+		loadImages = function() {
+			var $images = $('div.galleryImageBox img');
+			$images.each(function() {								
+				downloadImage($(this));				
 			});
 		};
 		
 		
+		
+		
 		$(document).ready(function(){
-			$('.parallax').parallax();
-			//setPreviews();
+			$('.parallax').parallax();			
+			loadImages();
 		});
 		
 	})();	
