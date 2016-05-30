@@ -1,8 +1,5 @@
-
-
 	(function()	{
-		
-		
+				
 		var createSpinner = function(div) {
 			
 			var outer = $('<div></div>')
@@ -34,8 +31,7 @@
 					
 			outer.append(spinner);
 			div.append(outer);
-			
-			
+						
 			/*
 				<div class="preloader-wrapper small active">
 					<div class="spinner-layer spinner-green-only">
@@ -49,11 +45,8 @@
 							<div class="circle"></div>
 						</div>
 					</div>
-				</div>
-			
+				</div>			
 			*/
-			
-			
 		},
 		
 		removeSpinner = function(div) {
@@ -66,17 +59,14 @@
 		},
 		
 		downloadImage = function($image) {
-			var $downloadingImage;
-			
-			//$image.height(200);
+			var $downloadingImage;			
 			createSpinner($image.parent());
 			$downloadingImage = $("<img>");
 			$downloadingImage.attr('src', getFullImageSource($image)); 
 			
 			$downloadingImage.load(function(){
 				$image.attr("src", $(this).attr("src"));	
-				removeSpinner($image.parent());
-				//$image.addClass('materialboxed');
+				removeSpinner($image.parent());				
 			});
 		},
 		
@@ -87,9 +77,6 @@
 				downloadImage($(this));				
 			});
 		};
-		
-		
-		
 		
 		$(document).ready(function(){
 			$('.parallax').parallax();			

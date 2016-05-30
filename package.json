@@ -1,0 +1,23 @@
+{
+  "name": "webGallery2D",
+  "version": "1.0.0",
+  "description": "A small gallery with 2D images",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HolgerPfaff/webGallery2D.git"
+  },
+  "author": "Holger Pfaff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HolgerPfaff/webGallery2D/issues"
+  },
+  "homepage": "https://github.com/HolgerPfaff/webGallery2D",
+  "devDependencies": {
+    "connect": "^3.4.1",
+    "serve-static": "^1.10.2"
+  }
+}
