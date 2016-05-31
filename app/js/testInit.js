@@ -10,7 +10,7 @@
 	                .addClass('preloader-wrapper small active')
 	                .append(
 	                    $('<div></div>')
-	                    .addClass('spinner-layer spinner-green-only')
+	                    .addClass('spinner-layer spinner-yellow-only')
 	                    .append(
 	                        $('<div></div>')
 	                        .addClass('circle-clipper left')
