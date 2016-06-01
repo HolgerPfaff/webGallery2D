@@ -90,9 +90,9 @@
 	        },
 
 
-            // Function which loads all images with the css-class 'galleryImageBox'
+            // Function which loads all images with the css-class 'gaImageBox'
 	        loadImages = function () {
-	            var $images = $('div.galleryImageBox img');
+	            var $images = $('div.gaImageBox img');
 	            $images.each(function () {
 	                downloadImage($(this));
 	            });
@@ -100,6 +100,7 @@
 
         // Entry point.
 	    $(document).ready(function () {
+			$('.button-collapse').sideNav();
 	        $('.parallax').parallax();
             
             // Exchange all preview-images through full images

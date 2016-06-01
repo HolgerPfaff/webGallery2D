@@ -65,19 +65,23 @@ nav.top-nav a.page-title {
     font-size: 48px;
     line-height: 122px;
 }
+
+.titleSuffix {
+	font-weight: 200;
+}
 	
 .parallax{
   position:static;
 }
         
 
-.galleryImageBox {
+.gaImageBox {
 	float:left;
 	margin:5px;
 }
 
 
-.galleryImage {
+.gaImage {
 	height:200px;	
 }
 
