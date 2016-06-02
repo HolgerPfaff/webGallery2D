@@ -53,9 +53,7 @@
 }
 
 
-.parallax-container {
-  height: 300px;
-}
+
 
 nav.top-nav {    
     height: 122px;
@@ -66,18 +64,24 @@ nav.top-nav a.page-title {
     line-height: 122px;
 }
 
+
+.parallax-container {
+  height: 300px;
+}
+
 .titleSuffix {
 	font-weight: 200;
 }
 	
-.parallax{
-  position:static;
+.titleParallax {
+    font-weight: 300;
 }
         
 
 .gaImageBox {
 	float:left;
-	margin:5px;
+	margin-right:5px;
+    margin-bottom:5px;
 }
 
 
@@ -98,4 +102,10 @@ nav.top-nav a.page-title {
     -ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);   
+}
+
+
+#gaImageContainer {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
