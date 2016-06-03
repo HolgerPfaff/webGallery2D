@@ -76,6 +76,10 @@ nav.top-nav a.page-title {
 .titleParallax {
     font-weight: 300;
 }
+
+.card-reveal ul li {
+    font-style: italic;
+}
         
 
 .gaImageBox {
