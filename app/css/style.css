@@ -89,6 +89,11 @@ body {
 #media{
     display:none;
 }
+
+#loading {
+    display:none;
+}
+
         
 
 .gaImageBox {

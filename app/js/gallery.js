@@ -71,7 +71,7 @@
                 // add spinner
 	            createSpinner($image.parent());
                 
-                // create a new imgae which is not added to the HTML and use it to load the full-size image
+                // create a new image which is not added to the HTML and use it to load the full-size image
 	            $downloadingImage = $("<img>");	            
 	            $downloadingImage.on("load", function () {
                     // Set the loaded image-url to the original image-element
@@ -101,13 +101,14 @@
         // Entry point.                
 	    $(document).ready(function () {      
             //$('#media').hide(); // Use when 'media' is not hidden with css
+            $('#loading').fadeIn(500);
             $('#noJSWarning').remove();
 			$('.button-collapse').sideNav();
 	        $('.parallax').parallax();                               	        
 	    });
         
         $(window).on("load", function(){
-            
+            $('#loading').hide();
             // Exchange all preview-images through full images
             loadImages();
             $('#media').fadeIn(3500); 
