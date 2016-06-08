@@ -80,6 +80,15 @@ nav.top-nav a.page-title {
 .card-reveal ul li {
     font-style: italic;
 }
+
+body {
+    background-color: #dddddd;
+}
+
+
+#media{
+    display:none;
+}
         
 
 .gaImageBox {

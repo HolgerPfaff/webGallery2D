@@ -73,7 +73,7 @@
                 
                 // create a new imgae which is not added to the HTML and use it to load the full-size image
 	            $downloadingImage = $("<img>");	            
-	            $downloadingImage.load(function () {
+	            $downloadingImage.on("load", function () {
                     // Set the loaded image-url to the original image-element
 	                $image.attr("src", $(this).attr("src"));
                     
@@ -98,13 +98,21 @@
 	            });
 	        };
 
-        // Entry point.
-	    $(document).ready(function () {
+        // Entry point.                
+	    $(document).ready(function () {      
+            //$('#media').hide(); // Use when 'media' is not hidden with css
+            $('#noJSWarning').remove();
 			$('.button-collapse').sideNav();
-	        $('.parallax').parallax();
+	        $('.parallax').parallax();                               	        
+	    });
+        
+        $(window).on("load", function(){
             
             // Exchange all preview-images through full images
-	        loadImages();
-	    });
+            loadImages();
+            $('#media').fadeIn(3500); 
+            $('.parallax').parallax();
+            
+        });
 
 	})();
