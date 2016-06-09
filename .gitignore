@@ -1,0 +1,8 @@
+Thumbs.db
+
+# Ignore the 3D gallery. It is saved in another repo
+app/3d/
+
+# ignore the node-modules
+node_modules/
+
