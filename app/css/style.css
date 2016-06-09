@@ -82,7 +82,7 @@ nav.top-nav a.page-title {
 }
 
 body {
-    background-color: #dddddd;
+    background-color: #000000;
 }
 
 
@@ -95,6 +95,10 @@ body {
 }
 
         
+.footer-copyright ul{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 .gaImageBox {
 	float:left;
