@@ -66,23 +66,27 @@
             // loads the main-image in the background, removes the spinner when ready 
             // and adds the lightbox-feature
 	        downloadImage = function ($image) {
-	            var $downloadingImage;
+	            var $downloadingImage,
+                    $div = $image.parent();
+                
                 
                 // add spinner
-	            createSpinner($image.parent());
+	            createSpinner($div);
                 
                 // create a new image which is not added to the HTML and use it to load the full-size image
 	            $downloadingImage = $("<img>");	            
 	            $downloadingImage.on("load", function () {
-                    // Set the loaded image-url to the original image-element
-	                $image.attr("src", $(this).attr("src"));
+                    
+                    $(this).addClass('gaImage gaImageOverlay');
+                                        
+                    $div.append($(this));
                     
                     // Remove the spinner
-                    removeSpinner($image.parent());
+                    removeSpinner($div);
                     
                     // Add lightbox
-                    $image.addClass('materialboxed');
-                    $image.materialbox();	                
+                    $(this).addClass('materialboxed');
+                    $(this).materialbox();	                
 	            });
                 
                 // Start the loading of the full-size-image

@@ -110,6 +110,13 @@ body {
 .gaImage {
 	height:200px;
     border-radius: 2px;
+
+}
+
+.gaImageOverlay {
+    position:absolute; 
+	top:0px; 
+	left:0px;
 }
 
 .gaPreloadBox {
@@ -121,7 +128,7 @@ body {
 .gaCentered {
     position: absolute;
     top: 50%;
-    left: 50%;  
+    left: 50%;      
     -ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);   
