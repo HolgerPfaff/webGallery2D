@@ -6,17 +6,17 @@
                     <div class="col s12 m6 input-field">
                         <i class="material-icons prefix">mail</i>
                         <label for="inputSender">E-Mail</label>
-                        <input id="inputSender" type="email" name="sender" class="validate" />                        
+                        <input id="inputSender" type="email" name="sender" class="validate" />
                     </div>
                     <div class="col s12 m6 input-field">
                         <i class="material-icons prefix">mail</i>
                         <label for="inputTitle">Betreff</label>
-                        <input id="inputTitle" type="text" name="title" class="validate" />                        
+                        <input id="inputTitle" type="text" name="title" class="validate" />
                     </div>
                     <div class="col s12 m12 input-field">
                         <i class="material-icons prefix">message</i>
                         <label for="inputMessage">Nachricht</label>
-                        <textarea name="inputMessage" class="materialize-textarea"></textarea>                        
+                        <textarea name="message" id="inputMessage" class="materialize-textarea"></textarea>
                     </div>
                 </div>
             </form>

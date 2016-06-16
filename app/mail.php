@@ -17,20 +17,21 @@
         return isset($timecheck);
     }
 
-    if(nobot(5)) {
+    if(nobot(10)) {
 
         $sender = $_POST["sender"];
         $header = $_POST["title"];        
         $text =  wordwrap($_POST["message"], 70);
-
-        $result = "Die Mail wurde doch nicht versendet.";
-        if(mail("webmaster@holger-pfaff.de", "$sender : $header", $text)) {
-            $result = "OK";
-        } 
+       
+        if(mail("webmaster@holger-pfaff.de", $header, "Absender: $sender\n\n$text")) {
+            echo("Die Nachricht wurde gesendet.");   
+        } else {
+            echo("Die Nachricht konnte nicht gesendet werden..."); 
+        }
         
-        echo("Die MAIL von $sender mit Betreff  $header wurde wahrscheinlich gesendet.<br/>$result");
+        
         
     } else {
-        echo("Sie sind ein BOT!!!!");
+        echo("Das Senden von Mails ist pro Benutzer nur alle 10 Sekunden gestattet.");
     }
 ?>
