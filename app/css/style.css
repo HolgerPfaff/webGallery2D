@@ -94,6 +94,10 @@ body {
     display:none;
 }
 
+textarea { 
+    resize:vertical; 
+}
+
         
 .footer-copyright ul{
     padding-top: 10px;

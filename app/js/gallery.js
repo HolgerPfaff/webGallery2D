@@ -102,19 +102,17 @@
 	            });
 	        },
 
+            // Function which checks if all fields are filled in correctly
 	        checkFields = function () {
 	            var errorMsg = '';
-	            $("form label input").each(function () {
+	            $("form input, form textarea").each(function () {
 	                if ($(this).val().length === 0) {
-	                    var n = $(this).parent("label").text().trim();
+	                    var n = $(this).prev().text().trim();
 	                    errorMsg = errorMsg.concat('Das Feld "', n, '" muss ausgefüllt werden.<br/>');
 	                }
 	            });
 
-	            if ($("form label textarea").val().length === 0) {
-	                errorMsg = errorMsg.concat('Die Nachricht fehlt noch.<br/>');
-	            }
-
+	           
 	            if (errorMsg.length > 0) {
 	                Materialize.toast("Das Formular ist nicht vollständig ausgefüllt.<br/><br/>".concat(errorMsg), 4000, "orange");
 	                return false;
