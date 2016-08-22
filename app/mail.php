@@ -20,8 +20,8 @@
     if(nobot(10)) {
 
         $sender = $_POST["sender"];
-        $header = $_POST["title"];        
-        $text =  wordwrap($_POST["message"], 70);
+        $header = utf8_decode($_POST["title"]);        
+        $text =  wordwrap(utf8_decode($_POST["message"]), 70);
        
         if(mail("webmaster@holger-pfaff.de", $header, "Absender: $sender\n\n$text")) {
             echo("Die Nachricht wurde gesendet.");   
