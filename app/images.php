@@ -1,6 +1,11 @@
 <div id="gaImageContainer" class="black">
     <div class="gaImageBox">
         <div class="gaPreloadBox">
+            <img class="gaImage" src="images/img-sm-29.jpg">
+        </div>
+    </div>
+    <div class="gaImageBox">
+        <div class="gaPreloadBox">
             <img class="gaImage" src="images/img-sm-28.jpg">
         </div>
     </div>
