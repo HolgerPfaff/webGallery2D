@@ -134,11 +134,7 @@
             <img class="gaImage" src="images/img-sm-10.jpg">
         </div>
     </div>
-    <div class="gaImageBox">
-        <div class="gaPreloadBox">
-            <img class="gaImage" src="images/img-sm-9.jpg">
-        </div>
-    </div>
+ 
     <div class="gaImageBox">
         <div class="gaPreloadBox">
             <img class="gaImage" src="images/img-sm-8.jpg">

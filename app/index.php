@@ -45,11 +45,7 @@
             <div class="parallax-container hide-on-small-only">
                 <div class="parallax"><img src="images/img-18.jpg"></div>
             </div>
-            
-            <?php        
-                include('mailForm.php');
-            ?>
-            
+         
         </div>
     </main>
     
