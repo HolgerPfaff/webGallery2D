@@ -1,4 +1,14 @@
 <div id="gaImageContainer" class="black">
+	<div class="gaImageBox">
+        <div class="gaPreloadBox">
+            <img class="gaImage" src="images/img-sm-38.jpg">
+        </div>
+    </div>
+	<div class="gaImageBox">
+        <div class="gaPreloadBox">
+            <img class="gaImage" src="images/img-sm-37.jpg">
+        </div>
+    </div>
      <div class="gaImageBox">
         <div class="gaPreloadBox">
             <img class="gaImage" src="images/img-sm-36.jpg">
